@@ -1,0 +1,31 @@
+name: pugs
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - cudatoolkit=11.8
+  - plyfile=0.8.1
+  - python=3.9.19
+  - pytorch=2.1.2
+  - pytorch3d=0.7.7
+  - torchvision=0.16.2
+  - tqdm
+  - hdbscan
+  - matplotlib
+  - numpy
+  - pip:
+    - submodules/diff-gaussian-rasterization
+    - submodules/diff-gaussian-rasterization_contrastive_f
+    - submodules/diff-gaussian-rasterization-depth
+    - submodules/diff-plane-rasterization
+    - submodules/simple-knn
+    - submodules/segment-anything
+    - opencv-python
+    - trimesh
+    - open-clip-torch
+    - joblib==1.1.0
+    - openai==0.28.0
+    - open3d
+    - transformers
+    - pillow
