@@ -155,3 +155,44 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+.wechat-container {
+    position: relative;
+    display: inline-block;
+}
+
+.wechat-qrcode {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 1000;
+    margin-bottom: 10px;
+}
+
+.wechat-qrcode img {
+    max-width: 200px;
+    width: auto;
+    height: auto;
+    display: block;
+}
+
+.wechat-qrcode::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 8px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+
+.wechat-container:hover .wechat-qrcode {
+    display: block;
+}

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
-    <meta name="description"
-          content="Zero-shot Physical Understanding with Gaussian Splatting.">
+    <meta name="description" content="Zero-shot Physical Understanding with Gaussian Splatting.">
     <meta name="keywords" content="PUGS, 3DGS, Zero-shot Physical Understanding, Physical Understanding">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PUGS:Zero-shot Physical Understanding with Gaussian Splatting</title>
@@ -22,15 +22,13 @@
         gtag('config', 'G-PYVRSFMDRL');
     </script>
 
-    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
     <link rel="stylesheet" href="./static/css/bulma.min.css">
     <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
     <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
     <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <link rel="stylesheet" href="./static/css/index.css">
     <link rel="icon" href="./static/images/favicon.svg">
 
@@ -40,270 +38,301 @@
     <script src="./static/js/bulma-slider.min.js"></script>
     <script src="./static/js/index.js"></script>
 </head>
+
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-        </a>
-    </div>
-    <div class="navbar-menu">
-        <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-            <a class="navbar-item" href="https://github.com/EverNorif">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
             </a>
-            <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">
-                    More Research
+        </div>
+        <div class="navbar-menu">
+            <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+                <a class="navbar-item" href="https://github.com/EverNorif">
+                    <span class="icon">
+                        <i class="fas fa-home"></i>
+                    </span>
                 </a>
-                <div class="navbar-dropdown">
-                    <a class="navbar-item" href="https://evernorif.github.io/PUGS">
-                        PUGS
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        More Research
                     </a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="https://evernorif.github.io/PUGS">
+                            PUGS
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
 
-<section class="hero">
-    <div class="hero-body">
-        <div class="container is-max-desktop">
-            <div class="columns is-centered">
-                <div class="column has-text-centered">
-                    <h1 class="title is-1 publication-title">PUGS:Zero-shot Physical Understanding with Gaussian
-                        Splatting.</h1>
-                    <div class="is-size-5 publication-authors">
-                        <span class="author-block">
-                            <a href="https://github.com/EverNorif" target="_blank">Yinghao Shuai</a><sup>1</sup>,</span>
-                        <span class="author-block">
-                            <a href="https://marcyu0303.github.io/" target="_blank">Ran Yu</a><sup>2</sup>,</span>
-                        <span class="author-block">
-                            <a href="https://tao-11-chen.github.io/" target="_blank">Yuantao Cheng</a><sup>3</sup>,</span>
-                        <span class="author-block">Zijian Jiang<sup>1</sup>,</span>
-                        <span class="author-block">
-                            <a href="https://kevinsong729.github.io/" target="_blank">Xiaowei Song</a><sup>1</sup>,</span>
-                        <span class="author-block">
-                            <a href="https://bigcileng.github.io/" target="_blank">Nan Wang</a><sup>1</sup>,</span>
-                        <span class="author-block">
-                            Jv Zheng<sup>4</sup>,</span>
-                        <span class="author-block">
-                            Jianzhu Ma<sup>4</sup>,</span>
-                        <span class="author-block">
-                            Meng Yang<sup>4</sup>,</span>
-                        <span class="author-block">
-                            Zhicheng Wang<sup>1</sup>,</span>
-                        <span class="author-block">
-                            Wenbo Ding<sup>2</sup>,</span>
-                        <span class="author-block"></span>
-                            <a href="https://sites.google.com/view/fromandto" target="_blank">Hao Zhao</a><sup>4</sup></span>
-                    </div>
-                    <div class="is-size-5 publication-authors">
-                        <span class="author-block"><sup>1</sup>Tongji University,</span>
-                        <span class="author-block"><sup>2</sup>Shenzhen International Graduate School, Tsinghua University,</span>
-                        <span class="author-block"><sup>3</sup>The Chinese University of Hong Kong,</span>
-                        <span class="author-block"><sup>4</sup>Institute for AI Industry Research(AIR), Tsinghua University</span>
-                    </div>
-
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
                     <div class="column has-text-centered">
-                        <div class="publication-links">
-                            <!-- PDF Link. -->
-                            <span class="link-block">
-                                <a href="./static/pdf/pugs_paper.pdf" target="_blank"
-                                   class="external-link button is-normal is-rounded is-dark">
-                                    <span class="icon">
-                                        <i class="fas fa-file-pdf"></i>
-                                    </span>
-                                    <span>Paper</span>
-                                </a>
-                            </span>
-                            <span class="link-block">
-                <a href="https://github.com/EverNorif/PUGS" target="_blank"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-                            <!-- Code Link. -->
-                            <span class="link-block">
-                <a href="https://github.com/EverNorif/PUGS" target="_blank"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                  </a>
-              </span>
-                            <!-- Dataset Link. -->
-                            <span class="link-block">
-                <a href="https://github.com/EverNorif/PUGS" target="_blank"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                </a></span>
+                        <h1 class="title is-1 publication-title">PUGS:Zero-shot Physical Understanding with Gaussian
+                            Splatting</h1>
+                        <div class="column is-size-4 has-text-centered">
+                            <span><a href="https://2025.ieee-icra.org/" target="_blank">ICRA 2025</a></span>
+                        </div>
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block">
+                                <a href="https://github.com/EverNorif" target="_blank">Yinghao
+                                    Shuai</a><sup>1,7</sup>,</span>
+                            <span class="author-block">
+                                <a href="https://marcyu0303.github.io/" target="_blank">Ran Yu</a><sup>2</sup>,</span>
+                            <span class="author-block">
+                                <a href="https://tao-11-chen.github.io/" target="_blank">Yuantao
+                                    Cheng</a><sup>3,7</sup>,</span>
+                            <span class="author-block">Zijian Jiang<sup>1,7</sup>,</span>
+                            <span class="author-block">
+                                <a href="https://kevinsong729.github.io/" target="_blank">Xiaowei
+                                    Song</a><sup>1,7</sup>,</span>
+                            <span class="author-block">
+                                <a href="https://bigcileng.github.io/" target="_blank">Nan
+                                    Wang</a><sup>1,7</sup>,</span>
+                            <span class="author-block">
+                                Jv Zheng<sup>6,7</sup>,</span>
+                            <span class="author-block">
+                                Jianzhu Ma<sup>6</sup>,</span>
+                            <span class="author-block">
+                                Meng Yang<sup>4,5</sup>,</span>
+                            <span class="author-block">
+                                Zhicheng Wang<sup>1</sup>,</span>
+                            <span class="author-block">
+                                Wenbo Ding<sup>2</sup>,</span>
+                            <span class="author-block"></span>
+                            <a href="https://sites.google.com/view/fromandto" target="_blank">Hao
+                                Zhao</a><sup>6,7</sup></span>
+                        </div>
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block"><sup>1</sup>Tongji University,</span>
+                            <span class="author-block"><sup>2</sup>Shenzhen International Graduate School, Tsinghua
+                                University,</span>
+                            <span class="author-block"><sup>3</sup>The Chinese University of Hong Kong,</span>
+                            <span class="author-block"><sup>4</sup>MGI Tech,</span>
+                            <span class="author-block"><sup>5</sup>Chulalongkorn University,</span>
+                            <span class="author-block"><sup>6</sup>Institute for AI Industry Research(AIR), Tsinghua
+                                University,</span>
+                            <span class="author-block"><sup>7</sup>Lightwheel AI</span>
+                        </div>
+
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <!-- PDF Link. -->
+                                <span class="link-block">
+                                    <a href="./static/pdf/pugs_paper.pdf" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-file-pdf"></i>
+                                        </span>
+                                        <span>Paper</span>
+                                    </a>
+                                </span>
+                                <span class="link-block">
+                                    <a href="https://github.com/EverNorif/PUGS" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="ai ai-arxiv"></i>
+                                        </span>
+                                        <span>arXiv</span>
+                                    </a>
+                                </span>
+                                <!-- Code Link. -->
+                                <span class="link-block">
+                                    <a href="https://github.com/EverNorif/PUGS" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-github"></i>
+                                        </span>
+                                        <span>Code</span>
+                                    </a>
+                                </span>
+                                <!-- Dataset Link. -->
+                                <span class="link-block">
+                                    <a href="https://github.com/EverNorif/PUGS" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="far fa-images"></i>
+                                        </span>
+                                        <span>Data</span>
+                                    </a></span>
+                                <!-- WeChat Link -->
+                                <span class="link-block">
+                                    <div class="wechat-container">
+                                        <a class="external-link button is-normal is-rounded is-dark">
+                                            <span class="icon">
+                                                <i class="fab fa-weixin"></i>
+                                            </span>
+                                            <span>WeChat</span>
+                                        </a>
+                                        <div class="wechat-qrcode">
+                                            <img src="./static/images/wechat_qrcode.png" alt="WeChat QR Code">
+                                        </div>
+                                    </div>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="hero teaser">
-    <div class="container is-max-desktop">
-        <div class="hero-body">
-            <img src="./static/images/teaser.png">
-            <h2 class="subtitle has-text-centered">
-                PUGS is a framework based on 3DGS which can perform dense prediction of physical properties for objects
-                in a zero-shot manner.
-            </h2>
+    <section class="hero teaser">
+        <div class="container is-max-desktop">
+            <div class="hero-body">
+                <img src="./static/images/teaser.png">
+                <h2 class="subtitle has-text-centered">
+                    PUGS is a framework based on 3DGS which can perform dense prediction of physical properties for
+                    objects
+                    in a zero-shot manner.
+                </h2>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="section">
-    <div class="container is-max-desktop">
-        <!-- Abstract. -->
-        <div class="columns is-centered has-text-centered">
-            <div class="column is-four-fifths">
-                <h2 class="title is-3">Abstract</h2>
-                <div class="content has-text-justified">
-                    <p>
-                        Current robotic systems can understand the categories and poses of objects well. But
-                        understanding physical properties like mass, friction, and hardness, in the wild, remains
-                        challenging. We propose a new method that reconstructs 3D objects using the Gaussian splatting
-                        representation and predicts various physical properties in a zero-shot manner. We propose
-                        two techniques during the reconstruction phase: a geometry-aware regularization loss function
-                        to improve the shape quality and a region-aware feature contrastive loss function to promote
-                        region affinity. Two other new techniques are designed during inference: a feature-based
-                        property propagation module and a volume integration module tailored for the Gaussian
-                        representation. Our framework is named as zero-shot physical understanding with Gaussian
-                        splatting, or PUGS. PUGS achieves new state-of-the-art results on the standard benchmark of
-                        ABO-500 mass prediction. We provide extensive quantitative ablations and qualitative
-                        visualization to demonstrate the mechanism of our designs. We show the proposed methodology
-                        can help address challenging real-world grasping tasks.
-                    </p>
+    <section class="section">
+        <div class="container is-max-desktop">
+            <!-- Abstract. -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            Current robotic systems can understand the categories and poses of objects well. But
+                            understanding physical properties like mass, friction, and hardness, in the wild, remains
+                            challenging. We propose a new method that reconstructs 3D objects using the Gaussian
+                            splatting
+                            representation and predicts various physical properties in a zero-shot manner. We propose
+                            two techniques during the reconstruction phase: a geometry-aware regularization loss
+                            function
+                            to improve the shape quality and a region-aware feature contrastive loss function to promote
+                            region affinity. Two other new techniques are designed during inference: a feature-based
+                            property propagation module and a volume integration module tailored for the Gaussian
+                            representation. Our framework is named as zero-shot physical understanding with Gaussian
+                            splatting, or PUGS. PUGS achieves new state-of-the-art results on the standard benchmark of
+                            ABO-500 mass prediction. We provide extensive quantitative ablations and qualitative
+                            visualization to demonstrate the mechanism of our designs. We show the proposed methodology
+                            can help address challenging real-world grasping tasks.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--/ Abstract. -->
+
+            <!-- Paper video. -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <video muted loop playsinline height="100%" controls>
+                        <source src="./static/videos/pugs_video.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <!--/ Paper video. -->
+
+            <!-- Pipeline Introduction. -->
+            <div class="columns is-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Framework</h2>
+                    <div class="content has-text-justified">
+                        <img src="./static/images/pipeline.jpg">
+                        <p>
+                            <strong>Overview of the whole pipeline.</strong> It can be divided into four parts: shape
+                            aware 3dgs reconstruction, VLM based
+                            physical property prediction, feature-based property propagation, and gaussianvolume
+                            integration.
+                        </p>
+                        <img src="./static/images/method.png">
+                        <p>
+                            <strong>Explanation of different modules in PUGS.</strong> During the reconstruction
+                            process, we compute the
+                            (a) geometry-aware regularization loss using normals obtained through two different methods.
+                            With (b) region-aware feature contrastive loss, we pull the features corresponding to
+                            Gaussians
+                            belonging to the same mask, while pushing apart the features corresponding to different
+                            masks.
+                            During (c) feature based property propagation, we use the similarity of region-aware feature
+                            to propagate physical properties.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--/ Pipeline Introduction. . -->
+
+
+            <!--Experiment Result. -->
+            <div class="columns is-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Experiment Result</h2>
+                    <h3 class="title is-4">Mass Estimation Result in ABO-500</h3>
+                    <div class="content has-text-justified">
+                        <img src="./static/images/abo-500-result.png">
+                    </div>
+                    <h3 class="title is-4">Ablation Result of GARL</h3>
+                    <div class="content has-text-justified">
+                        <p>GARL: Geometry-aware regularization loss.</p>
+                    </div>
+                    <video autoplay muted loop playsinline height="100%">
+                        <source src="./static/videos/ablation-garl.mp4" type="video/mp4">
+                    </video>
+                    <h3 class="title is-4">Some Quantitative Result</h3>
+                    <div class="content has-text-justified">
+                    </div>
+                    <video autoplay muted loop playsinline height="100%">
+                        <source src="./static/videos/quantitative_1.mp4" type="video/mp4">
+                    </video>
+                    <video autoplay muted loop playsinline height="100%">
+                        <source src="./static/videos/quantitative_2.mp4" type="video/mp4">
+                    </video>
+                    <h3 class="title is-4">Application about Grasping</h3>
+                    <video autoplay muted loop playsinline height="100%">
+                        <source src="./static/videos/application-grasping.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <!--/ Experiment Result. . -->
+        </div>
+    </section>
+
+    <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+            <h2 class="title">BibTeX</h2>
+            <pre><code>Coming soon...</code></pre>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <a class="icon-link" href="./static/pdf/pugs_paper.pdf">
+                    <i class="fas fa-file-pdf"></i>
+                </a>
+                <a class="icon-link" href="https://github.com/EverNorif" class="external-link" disabled target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <div class="content">
+                        <p>
+                            This website template is borrowed from <a
+                                href="https://github.com/nerfies/nerfies.github.io" target="_blank">here</a>.
+                            We thank their great work.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-        <!--/ Abstract. -->
-
-        <!-- Paper video. -->
-        <div class="columns is-centered has-text-centered">
-            <div class="column is-four-fifths">
-                <video muted loop playsinline height="100%" controls>
-                    <source src="./static/videos/pugs_video.mp4"
-                            type="video/mp4">
-                </video>
-            </div>
-        </div>
-        <!--/ Paper video. -->
-
-        <!-- Pipeline Introduction. -->
-        <div class="columns is-centered">
-            <div class="column is-four-fifths">
-                <h2 class="title is-3">Framework</h2>
-                <div class="content has-text-justified">
-                    <img src="./static/images/pipeline.jpg">
-                    <p>
-                        <strong>Overview of the whole pipeline.</strong> It can be divided into four parts: shape aware 3dgs reconstruction, VLM based
-                        physical property prediction, feature-based property propagation, and gaussianvolume integration.
-                    </p>
-                    <img src="./static/images/method.png">
-                    <p>
-                        <strong>Explanation of different modules in PUGS.</strong> During the reconstruction process, we compute the 
-                        (a) geometry-aware regularization loss using normals obtained through two different methods. 
-                        With (b) region-aware feature contrastive loss, we pull the features corresponding to Gaussians 
-                        belonging to the same mask, while pushing apart the features corresponding to different masks. 
-                        During (c) feature based property propagation, we use the similarity of region-aware feature 
-                        to propagate physical properties.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <!--/ Pipeline Introduction. . -->
-
-
-        <!--Experiment Result. -->
-        <div class="columns is-centered">
-            <div class="column is-four-fifths">
-                <h2 class="title is-3">Experiment Result</h2>
-                <h3 class="title is-4">Mass Estimation Result in ABO-500</h3>
-                <div class="content has-text-justified">
-                    <img src="./static/images/abo-500-result.png">
-                </div>
-                <h3 class="title is-4">Ablation Result of GARL</h3>
-                <div class="content has-text-justified">
-                    <p>GARL: Geometry-aware regularization loss.</p>
-                </div>
-                <video autoplay muted loop playsinline height="100%">
-                    <source src="./static/videos/ablation-garl.mp4"
-                            type="video/mp4">
-                </video>
-                <h3 class="title is-4">Some Quantitative Result</h3>
-                <div class="content has-text-justified">
-                </div>
-                <video autoplay muted loop playsinline height="100%">
-                    <source src="./static/videos/quantitative_1.mp4"
-                            type="video/mp4">
-                </video>
-                <video autoplay muted loop playsinline height="100%">
-                    <source src="./static/videos/quantitative_2.mp4"
-                            type="video/mp4">
-                </video>
-                <h3 class="title is-4">Application about Grasping</h3>
-                <video autoplay muted loop playsinline height="100%">
-                    <source src="./static/videos/application-grasping.mp4"
-                            type="video/mp4">
-                </video>
-            </div>
-        </div>
-        <!--/ Experiment Result. . -->
-    </div>
-</section>
-
-<section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-        <h2 class="title">BibTeX</h2>
-        <pre><code>Coming soon...</code></pre>
-    </div>
-</section>
-
-
-<footer class="footer">
-    <div class="container">
-        <div class="content has-text-centered">
-            <a class="icon-link"
-               href="./static/pdf/pugs_paper.pdf">
-                <i class="fas fa-file-pdf"></i>
-            </a>
-            <a class="icon-link" href="https://github.com/EverNorif" class="external-link" disabled target="_blank">
-                <i class="fab fa-github"></i>
-            </a>
-        </div>
-        <div class="columns is-centered">
-            <div class="column is-8">
-                <div class="content">
-                    <p>
-                        This website template is borrowed from <a href="https://github.com/nerfies/nerfies.github.io"
-                                                                  target="_blank">here</a>.
-                        We thank their great work.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
+    </footer>
 
 </body>
+
 </html>
