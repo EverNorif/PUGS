@@ -1,6 +1,8 @@
 # PUGS
 The repository provides code for the paper "PUGS: Zero-shot Physical Understanding with Gaussian Splatting".
 
+- 🎉 Our paper have been accepted by [ICRA 2025](https://2025.ieee-icra.org/) 🎉
+
 # Prerequisites
 ## Installation
 
@@ -17,17 +19,17 @@ conda activate pugs
 Follow the [NeRF2Physics](https://github.com/ajzhai/NeRF2Physics), we also use the ABO-500 dataset for testing. You can download the dataset [here](https://github.com/ajzhai/NeRF2Physics?tab=readme-ov-file#abo-500-dataset). The data should be organized as follows:
 
 ```shell
-data/
-    abo_500/
-        scenes/
-            scene0000/
-                images/
-                    image0000.jpg
-                    ...
-                transforms.json
-            ...
-        filtered_product_weights.json
-        splits.json
+data
+├── abo_500
+    ├── scenes
+    │   ├── scene0000
+    │   │   ├── images
+    │   │   │   ├── image0000.jpg
+    │   │   │   └── ...
+    │   │   └── transforms.json
+    │   └── ...
+    ├── filtered_product_weights.json
+    └── splits.json
 ```
 
 If you want to use your own data, you should organize the data in the same way or other formats which can be parsed by the `scene/dataset_readers.py`.
