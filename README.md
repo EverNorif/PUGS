@@ -3,6 +3,12 @@ The repository provides code for the paper "PUGS: Zero-shot Physical Understandi
 
 - 🎉 Our paper have been accepted by [ICRA 2025](https://2025.ieee-icra.org/) 🎉
 
+https://github.com/user-attachments/assets/8deecbb3-7bd0-4360-ac8b-02c7b156732b
+
+- Some qualitative results
+
+https://github.com/user-attachments/assets/fea7489a-e827-4c95-80b8-f56926af6b2b
+
 # Prerequisites
 ## Installation
 
